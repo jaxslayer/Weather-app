@@ -3,8 +3,8 @@ import { useFetch } from "../hooks/useFetch";
 import { useState } from "react";
 import { WiHumidity, WiBarometer, WiStrongWind } from "react-icons/wi";
 const Main = (props) => {
-  const key = "79577a067e57ccc6f651bc494aaef1d9";
-  const uri = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${key}&units=metric`;
+  const Key = import.meta.env.VITE_KEY;
+  const uri = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${Key}&units=metric`;
 
   const { data, isLoading, error, isError } = useFetch(uri);
 
